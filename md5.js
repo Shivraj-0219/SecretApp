@@ -14,7 +14,7 @@ app.use(express.static("public"));
 app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({ extended: true }));
 
-mongoose.connect(MONGO_ATLAS,
+mongoose.connect(process.env.MONGO_ATLAS,
  { useCreateIndex: true, useNewUrlParser: true, useUnifiedTopology: true })
  .then(() => console.log('connected to DB'))
  .catch(err => console.log(err));
