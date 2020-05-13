@@ -25,8 +25,8 @@ app.use(passport.session());
 
 
 
-//mongoose.connect("mongodb://localhost:27017/userDB", { useNewUrlParser: true });
-mongoose.connect('mongodb+srv://Shivraj:Sagar@clusterrest-xmi2d.mongodb.net/test?retryWrites=true&w=majority',
+
+mongoose.connect(MONGO_ATLAS,
  { useCreateIndex: true, useNewUrlParser: true, useUnifiedTopology: true })
  .then(() => console.log('connected to DB'))
  .catch(err => console.log(err));
